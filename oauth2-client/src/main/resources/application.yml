@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-oauth-client
+            client-secret: ElN1Cmv1sA7ZiDTjsqbZHJ5QEDeFP3Mg
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/realms/ens-realm

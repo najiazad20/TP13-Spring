@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Déconnexion</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            text-align: center;
+            border: 2px solid #000000;
+            padding: 60px 80px;
+            border-radius: 4px;
+        }
+        h2 { font-size: 1.8rem; margin-bottom: 10px; }
+        p { color: #555; margin: 10px 0 30px 0; }
+        .links { display: flex; gap: 20px; justify-content: center; }
+        .btn {
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .btn-primary {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+        .btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Déconnexion réussie ✓</h2>
+    <p>Vous avez été déconnecté avec succès.<br>Merci de votre visite !</p>
+    <div class="links">
+        <a class="btn btn-secondary" href="/">Accueil</a>
+        <a class="btn btn-primary" href="/oauth2/authorization/google">
+            Se reconnecter
+        </a>
+    </div>
+</div>
+</body>
+</html>
